@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        th {
+            padding-top: 10px; /* Ajusta o espaço acima dos cabeçalhos */
+        }
+        .footer {
+            background-color: #f8f9fa; /* Cor de fundo do rodapé */
+            padding: 20px 0; /* Padding para o rodapé */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax text-white text-center">
+        <h1 class="display-4">Gerenciador de Tarefas</h1>
+    </div>
+
+    <div class="container mt-5">
+        <div class="input-group mb-4">
+            <input type="text" class="form-control" id="novaTarefa" placeholder="Digite uma nova tarefa" aria-label="Nova Tarefa" aria-required="true" required>
+            <div class="input-group-append">
+                <button class="btn btn-primary" onclick="adicionarTarefa()">
+                    <i class="fas fa-plus"></i> Adicionar Tarefa
+                </button>
+            </div>
+        </div>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th class="align-middle">ID</th>
+                    <th class="align-middle">Descrição</th>
+                    <th class="align-middle">Concluída</th>
+                    <th class="align-middle">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaTarefas">
+                <!-- As tarefas serão inseridas aqui dinamicamente -->
+            </tbody>
+        </table>
+
+        <footer class="footer text-center mt-5">
+            <p>&copy; 2024 Gerenciador de Tarefas. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.11/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
